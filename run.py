@@ -24,3 +24,5 @@ def create_app():
 if __name__ == "__main__":
     app = create_app()
     app.run(debug=os.getenv('FLASK_ENV') == 'development')
+else:
+    app = create_app()
