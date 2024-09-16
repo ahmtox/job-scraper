@@ -21,8 +21,8 @@ class GoogleJobs(Resource):
         
         if latest_job and new_jobs:
             if latest_job.timestamp >= datetime.utcnow():
-                return {'jobs': []}, 200  # No new data, return empty list
-
+                return {'jobs': []}, 200
+            
         return {'jobs': new_jobs}, 200  # Return new data if available
 
 @jobs_namespace.route('/linkedin')
