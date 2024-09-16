@@ -43,7 +43,6 @@ def scrape_google_jobs():
         # Check if the job already exists in the database
         existing_job = session.query(Job).filter_by(title=title, platform='Google').first()
         
-        # If job is not found, it's new data
         if not existing_job:
             new_job = Job(title=title, location=location, platform='Google')
             session.add(new_job)
