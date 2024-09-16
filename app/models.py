@@ -10,7 +10,7 @@ class Job(Base):
     title = Column(String, nullable=False)
     company = Column(String, nullable=False)
     location = Column(String, nullable=True)
-    platform = Column(String, nullable=False)  # e.g. 'Google', 'LinkedIn'
+    platform = Column(String, nullable=False)
     timestamp = Column(DateTime, default=datetime.utcnow)
 
     def __repr__(self):
