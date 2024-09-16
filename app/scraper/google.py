@@ -50,7 +50,6 @@ def scrape_google_jobs():
             jobs.append({'title': title, 'location': location})
             new_data = True
     
-    # Commit the session if there is new data
     if new_data:
         session.commit()
 
