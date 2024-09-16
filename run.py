@@ -17,7 +17,7 @@ def create_app():
     api = Api(app, title="Job Scraper API", version="1.0", description="API for scraping job listings")
 
     # Register namespaces (routes)
-    api.add_namespace(jobs_namespace, path='/jobs')
+    api.add_namespace(jobs_namespace, path='/api/jobs')
 
     return app
 
