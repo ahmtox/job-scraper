@@ -19,7 +19,6 @@ class GoogleJobs(Resource):
         # Scrape new jobs from Google
         new_jobs = scrape_google_jobs()
         
-        # Compare timestamps
         if latest_job and new_jobs:
             if latest_job.timestamp >= datetime.utcnow():
                 return {'jobs': []}, 200  # No new data, return empty list
