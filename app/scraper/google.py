@@ -40,7 +40,6 @@ def scrape_google_jobs():
         title = job_posting.find('h2').text
         location = job_posting.find('div', class_='location').text
         
-        # Check if the job already exists in the database
         existing_job = session.query(Job).filter_by(title=title, platform='Google').first()
         
         if not existing_job:
